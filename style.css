@@ -1,0 +1,211 @@
+:root{
+    /* --primary: rgb(255, 120, 3); */
+    --primary: rgb(70, 70, 69);
+    --light: rgba(255, 121, 3, 0.886);
+    --dark: rgba(44, 43, 43, 0.886);
+    --white: rgb(246, 246, 246);
+    --danger: rgb(226, 1, 72);
+    --success: rgb(3, 233, 133);
+
+    --box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.06);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: var(--primary);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+span{
+    color: var(--primary);
+}
+
+button{
+    border: 0;
+    outline: 0;
+    transition: 0.4s ease;
+    border-radius: 5px;
+}
+
+button:active{
+    transform: scale(1.1);
+}
+
+.show_form{
+    background: var(--primary);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.container{
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+}
+
+.container .closebtn{
+    position: absolute;
+    right: 5%;
+    font-size: 1.5rem;
+    box-shadow: var(--box-shadow);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container form{
+    width: 90%;
+    margin: 0 auto;
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.container form input{
+    width: 90%;
+    border: 2px solid var(--primary);
+    outline: 0;
+    border-radius: 5px;
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 17px;
+    color: var(--light);
+    margin: 1rem 0;
+}
+
+label{
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.add_btn{
+    background: var(--primary);
+    color: white;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 17px;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.add_btn:hover{
+    background: var(--light);
+}
+
+.links_display{
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    background: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: scroll;
+}
+
+.links_display::-webkit-scrollbar{
+    width: 0.4rem;
+}
+
+.links_display::-webkit-scrollbar-thumb{
+    background: var(--primary);
+}
+
+.link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.link a{
+    width: 80%;
+}
+
+.link .info{
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.link .btns button{
+    border-radius: 5px;
+    padding: 2px;
+    box-shadow: var(--box-shadow);
+    width: 2rem;
+    height: 2rem;
+    font-size: 17px;
+}
+
+.btns{
+    opacity: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.link:hover .btns{
+    opacity: 1;
+}
+
+.deletebtn{
+    background: white;
+    color: var(--danger);
+}
+
+.deletebtn:hover{
+    background: var(--danger);
+    color: white;
+}
+
+.editbtn{
+    background: white;
+    color: var(--success);
+}
+
+.editbtn:hover{
+    background: var(--success);
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        width: 100%;
+    }
+}
